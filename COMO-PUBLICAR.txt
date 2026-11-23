@@ -1,0 +1,20 @@
+CÓMO PUBLICAR EL SIMULADOR
+
+1) Descomprime el zip en tu computadora y abre la carpeta.
+
+2) SUBIR A GITHUB (3 subidas, porque la web de GitHub acepta 100 archivos por vez)
+   En tu repositorio: Add file > Upload files. Arrastra y pulsa Commit changes en cada una:
+   - Subida 1: todo, menos las carpetas senales-1 y senales-2
+   - Subida 2: la carpeta senales-1
+   - Subida 3: la carpeta senales-2
+   index.html debe quedar en la raíz del repositorio, no dentro de otra carpeta.
+   Si el repositorio tenía el simulador antiguo, puedes borrar sus carpetas src y assets: ya no se usan.
+
+3) NETLIFY
+   - Si el sitio ya está conectado al repositorio, se actualiza solo.
+   - Si es nuevo: Add new site > Import an existing project > GitHub > elige el repositorio > Deploy.
+     La configuración sale de netlify.toml; no cambies nada.
+
+Para editar:
+   js/config.js  WhatsApp, redes, anuncios, PDF y reglas del examen
+   js/marca.js   las 100 preguntas de Chapa Tu Licencia

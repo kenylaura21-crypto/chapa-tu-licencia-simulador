@@ -1,0 +1,25 @@
+# Sitio estático: Netlify publica los archivos tal cual, sin compilar.
+[build]
+  command = "echo Sitio estatico, sin compilacion"
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/senales-1/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/senales-2/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
